@@ -31,8 +31,8 @@ spec:
             chart: ./charts/investager
             sourceRef:
                 kind: GitRepository
-                name: investager
-                namespace: investager
+                name: flux-system
+                namespace: flux-system
     install:
         remediation:
             retries: 3
