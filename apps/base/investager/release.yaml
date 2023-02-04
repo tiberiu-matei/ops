@@ -31,7 +31,7 @@ spec:
             chart: ./charts/investager
             sourceRef:
                 kind: GitRepository
-                name: flux-system
+                name: charts
                 namespace: flux-system
     install:
         remediation:
