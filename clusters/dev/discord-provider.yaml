@@ -1,0 +1,11 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta2
+kind: Provider
+metadata:
+    name: discord-provider
+    namespace: flux-system
+spec:
+    type: discord
+    channel: dev
+    username: flux-dev
+    secretRef:
+        name: discord-url
