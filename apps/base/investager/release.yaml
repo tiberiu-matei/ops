@@ -1,0 +1,38 @@
+# apiVersion: helm.toolkit.fluxcd.io/v2beta1
+# kind: HelmRelease
+# metadata:
+#     name: backend
+#     namespace: investager
+# spec:
+#     releaseName: investager-api
+#     interval: 5m
+#     chart:
+#         spec:
+#             chart: ./charts/
+#             version: '>=4.0.0 <5.0.0'
+#             sourceRef:
+#                 kind: GitRepository
+#                 name: investager
+#                 namespace: investager
+#     install:
+#         remediation:
+#             retries: 3
+# ---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+    name: investager-ui
+    namespace: investager
+spec:
+    releaseName: investager-ui
+    interval: 5m
+    chart:
+        spec:
+            chart: ./charts/investager
+            sourceRef:
+                kind: GitRepository
+                name: investager
+                namespace: investager
+    install:
+        remediation:
+            retries: 3

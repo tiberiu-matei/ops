@@ -1,0 +1,11 @@
+# api-image:
+#     repository: ghcr.io/tiberiu-matei/investager/api:sha-e200836
+#     pullPolicy: IfNotPresent
+
+ui:
+    replicaCount: 3
+    application:
+        name: investager-ui
+    image:
+        repository: ghcr.io/tiberiu-matei/investager/ui:sha-e200836
+        pullPolicy: IfNotPresent
