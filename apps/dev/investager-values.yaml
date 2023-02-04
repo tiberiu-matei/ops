@@ -1,0 +1,16 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: investager
+  namespace: investager
+spec:
+  chart:
+    spec:
+      version: ">=0.0.1"
+  values:
+    api:
+      image:
+        tag: main-037d56b-1675890832 # {"$imagepolicy": "flux-system:investager-api:tag"}
+    ui:
+      image:
+        tag: main-037d56b-1675890805 # {"$imagepolicy": "flux-system:investager-ui:tag"}

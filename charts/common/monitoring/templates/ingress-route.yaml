@@ -1,0 +1,18 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+    name: grafana
+    namespace: monitoring
+spec:
+    entryPoints:
+        - web
+    routes:
+        - match: PathPrefix(`/grafana`)
+          kind: Rule
+          middlewares:
+              - name: grafana-strip
+                namespace: monitoring
+          services:
+              - name: grafana
+                namespace: monitoring
+                port: 80
