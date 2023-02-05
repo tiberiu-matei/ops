@@ -1,6 +1,1 @@
-replicaCount: 3
-application:
-    name: investager-ui
-image:
-    repository: ghcr.io/tiberiu-matei/investager/ui:sha-e200836
-    pullPolicy: IfNotPresent
+el: vana
