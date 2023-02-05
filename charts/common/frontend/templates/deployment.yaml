@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
     creationTimestamp: null
+    namespace: {{ .Values.namespace }}
     labels:
         app: react-webapp
     name: {{ .Values.application.name }}
@@ -15,11 +16,11 @@ spec:
             creationTimestamp: null
             labels:
                 app: react-webapp
+                name: {{ .Values.application.name }}
         spec:
             containers:
                 - image: {{ .Values.image.repository }}
                   name: webapp
                   imagePullPolicy: {{ .Values.image.pullPolicy }}
-                  resources: {}
                   ports:
                       - containerPort: 3001

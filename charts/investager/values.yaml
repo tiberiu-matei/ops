@@ -3,6 +3,7 @@
 #     pullPolicy: IfNotPresent
 
 ui:
+    namespace: investager
     replicaCount: 3
     application:
         name: investager-ui
