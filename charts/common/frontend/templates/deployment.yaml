@@ -4,7 +4,7 @@ metadata:
     creationTimestamp: null
     labels:
         app: react-webapp
-    name: { { .Values.application.name } }
+    name: investager-ui
 spec:
     replicas: { { .Values.replicaCount } }
     selector:
