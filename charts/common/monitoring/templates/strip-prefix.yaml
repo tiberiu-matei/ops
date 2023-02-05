@@ -1,0 +1,9 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+    name: grafana-strip
+    namespace: monitoring
+spec:
+    stripPrefix:
+        prefixes:
+            - /grafana

@@ -1,15 +1,15 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-    name: investager
+    name: monitoring
     namespace: flux-system
 spec:
-    targetNamespace: investager
-    releaseName: investager
+    targetNamespace: monitoring
+    releaseName: monitoring
     interval: 5m
     chart:
         spec:
-            chart: ./charts/investager
+            chart: ./charts/monitoring
             sourceRef:
                 kind: GitRepository
                 name: charts
