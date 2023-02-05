@@ -6,7 +6,7 @@ metadata:
         app: react-webapp
     name: investager-ui
 spec:
-    replicas: { { .Values.replicaCount } }
+    replicas: {{ .Values.replicaCount }}
     selector:
         matchLabels:
             app: react-webapp
