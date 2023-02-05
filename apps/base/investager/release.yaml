@@ -25,7 +25,7 @@ metadata:
     namespace: investager
 spec:
     releaseName: investager-ui
-    interval: 5m
+    interval: 30m
     chart:
         spec:
             chart: ./charts/investager
