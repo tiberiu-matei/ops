@@ -1,1 +1,3 @@
 abcd: 'efgh'
+application:
+    name: frontend
