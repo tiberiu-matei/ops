@@ -4,9 +4,9 @@ metadata:
     creationTimestamp: null
     labels:
         app: react-webapp
-    name: '{{ .Values.application.name }}'
+    name: {{ .Values.application.name }}
 spec:
-    replicas: '{{ .Values.replicaCount }}'
+    replicas: {{ .Values.replicaCount }}
     selector:
         matchLabels:
             app: react-webapp
@@ -17,9 +17,9 @@ spec:
                 app: react-webapp
         spec:
             containers:
-                - image: '{{ .Values.image.repository }}'
+                - image: {{ .Values.image.repository }}
                   name: webapp
-                  imagePullPolicy: '{{ .Values.image.pullPolicy }}'
+                  imagePullPolicy: {{ .Values.image.pullPolicy }}
                   resources: {}
                   ports:
                       - containerPort: 3001

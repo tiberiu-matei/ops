@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: '{{ .Values.application.name }}'
+    name: {{ .Values.application.name }}
     labels:
-        run: '{{ .Values.application.name }}'
+        run: {{ .Values.application.name }}
 spec:
     ports:
         - port: 3001
           protocol: TCP
     selector:
-        app: '{{ .Values.application.name }}'
+        app: {{ .Values.application.name }}
     type: LoadBalancer
