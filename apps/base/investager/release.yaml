@@ -21,10 +21,11 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-    name: investager-ui
-    namespace: investager
+    name: investager
+    namespace: flux-system
 spec:
-    releaseName: investager-ui
+    targetNamespace: investager
+    releaseName: investager
     interval: 30m
     chart:
         spec:

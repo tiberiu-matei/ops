@@ -1,7 +1,8 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-    name: investager-ui
+    name: investager
+    namespace: investager
 spec:
     chart:
         spec:

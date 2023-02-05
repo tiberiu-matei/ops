@@ -3,5 +3,4 @@ kind: Kustomization
 namespace: investager
 resources:
     - namespace.yaml
-    - repository.yaml
     - release.yaml
