@@ -1,26 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    creationTimestamp: null
     namespace: {{ .Values.namespace }}
-    labels:
-        app: react-webapp
     name: {{ .Values.application.name }}
+    labels:
+        app: express-app
 spec:
     replicas: {{ .Values.replicaCount }}
     selector:
         matchLabels:
-            app: react-webapp
+            app: express-app
     template:
         metadata:
-            creationTimestamp: null
             labels:
-                app: react-webapp
+                app: express-app
                 name: {{ .Values.application.name }}
         spec:
             containers:
                 - image: {{ .Values.image.repository }}
-                  name: webapp
+                  name: express
                   imagePullPolicy: {{ .Values.image.pullPolicy }}
                   ports:
                       - containerPort: 3001

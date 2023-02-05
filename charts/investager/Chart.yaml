@@ -1,11 +1,15 @@
 dependencies:
+    - alias: api
+      name: express
+      version: '0.1.5'
+      repository: file://../common/express
     - alias: ui
-      name: frontend
-      version: '0.1.4'
-      repository: file://../common/frontend
+      name: next
+      version: '0.1.5'
+      repository: file://../common/next
 apiVersion: v2
 name: investager
 description: Investager Helm chart
 type: application
-version: 0.1.4
-appVersion: '0.1.4'
+version: 0.1.5
+appVersion: '0.1.5'
