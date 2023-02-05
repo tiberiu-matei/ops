@@ -1,11 +1,11 @@
 dependencies:
     - alias: ui
       name: frontend
-      version: '0.1.0'
+      version: '0.1.1'
       repository: file://../common/frontend
 apiVersion: v2
 name: investager
 description: Investager Helm chart
 type: application
-version: 0.1.0
-appVersion: '0.1.0'
+version: 0.1.1
+appVersion: '0.1.1'
