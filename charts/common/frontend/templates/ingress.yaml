@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: {{ .Values.application.name }}
+    annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: web # useless
+spec:
+    rules:
+        - host: localhost
+          http:
+              paths:
+                  - path: /ui
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: {{ .Values.application.name }}
+                            port:
+                                number: 80
