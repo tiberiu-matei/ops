@@ -1,3 +1,6 @@
-abcd: 'efgh'
+replicaCount: 3
 application:
-    name: frontend
+    name: investager-ui
+image:
+    repository: ghcr.io/tiberiu-matei/investager/ui:sha-e200836
+    pullPolicy: IfNotPresent
