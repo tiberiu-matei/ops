@@ -7,7 +7,7 @@ spec:
     entryPoints:
         - web
     routes:
-        - match: PathPrefix('{{ .Values.application.prefix }}')
+        - match: PathPrefix(`/grafana`)
           kind: Rule
           middlewares:
               - name: grafana-strip
