@@ -1,6 +1,6 @@
 api:
     namespace: investager
-    replicaCount: 3
+    replicaCount: 1
     application:
         prefix: /api
         name: investager-api
