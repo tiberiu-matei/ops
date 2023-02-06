@@ -9,7 +9,7 @@ api:
         pullPolicy: IfNotPresent
 ui:
     namespace: investager
-    replicaCount: 3
+    replicaCount: 1
     application:
         prefix: /ui
         name: investager-ui
