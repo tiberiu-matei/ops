@@ -9,9 +9,9 @@ spec:
     routes:
         - match: PathPrefix(`{{ .Values.application.prefix }}`)
           kind: Rule
-          middlewares:
-            - name: {{ .Values.application.name }}-strip
-              namespace: {{ .Values.namespace }}
+          #   middlewares:
+          #     - name: {{ .Values.application.name }}-strip
+          #       namespace: {{ .Values.namespace }}
           services:
             - name: {{ .Values.application.name }}
               namespace: {{ .Values.namespace }}
