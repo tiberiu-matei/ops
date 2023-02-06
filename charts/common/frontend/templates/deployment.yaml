@@ -21,4 +21,4 @@ spec:
                   name: app
                   imagePullPolicy: {{ .Values.image.pullPolicy }}
                   ports:
-                      - containerPort: 3001
+                      - containerPort: {{ .Values.port }}
