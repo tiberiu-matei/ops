@@ -20,4 +20,4 @@ spec:
     values:
         api:
             image:
-                tag: main-12345-12345 # {"$imagepolicy": "flux-system:podinfo:tag"}
+                tag: sha-882949f # {"$imagepolicy": "flux-system:podinfo:tag"}
