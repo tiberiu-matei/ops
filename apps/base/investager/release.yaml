@@ -17,3 +17,7 @@ spec:
     install:
         remediation:
             retries: 3
+    values:
+        api:
+            image:
+                tag: main-12345-12345 # {"$imagepolicy": "flux-system:podinfo:tag"}

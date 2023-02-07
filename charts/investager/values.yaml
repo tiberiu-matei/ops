@@ -6,7 +6,7 @@ api:
         prefix: /api
         name: investager-api
     image:
-        repository: ghcr.io/tiberiu-matei/investager/api:sha-436db0a
+        repository: ghcr.io/tiberiu-matei/investager/api
         pullPolicy: IfNotPresent
 ui:
     namespace: investager
@@ -16,5 +16,5 @@ ui:
         prefix: /ui
         name: investager-ui
     image:
-        repository: ghcr.io/tiberiu-matei/investager/ui:sha-436db0a
+        repository: ghcr.io/tiberiu-matei/investager/ui
         pullPolicy: IfNotPresent
