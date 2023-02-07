@@ -20,7 +20,7 @@ spec:
     values:
         api:
             image:
-                tag: sha-882949f # {"$imagepolicy": "flux-system:investager-api:tag"}
+                tag: main-ffae47a-1675725095 # {"$imagepolicy": "flux-system:investager-api:tag"}
         ui:
             image:
-                tag: sha-882949f # {"$imagepolicy": "flux-system:investager-ui:tag"}
+                tag: main-ffae47a-1675725095 # {"$imagepolicy": "flux-system:investager-ui:tag"}
