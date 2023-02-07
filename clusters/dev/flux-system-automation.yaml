@@ -16,9 +16,6 @@ spec:
             author:
                 email: fluxcdbot@investager.com
                 name: fluxcdbot
-            signingKey:
-                secretRef:
-                    name: flux-system
             messageTemplate: "{{range .Updated.Images}}{{println .}}{{end}}"
         push:
             branch: flux
