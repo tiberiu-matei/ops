@@ -5,7 +5,7 @@ metadata:
     namespace: flux-system
 spec:
     type: discord
-    channel: dev
-    username: flux-dev
+    channel: {{ .Values.discordChannel }}
+    username: {{ .Values.discordUser }}
     secretRef:
         name: discord-url
