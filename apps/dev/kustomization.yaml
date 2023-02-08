@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: investager
 resources:
     - ../base/investager
+    - image-automation.yaml
 patchesStrategicMerge:
     - investager-values.yaml
 ---

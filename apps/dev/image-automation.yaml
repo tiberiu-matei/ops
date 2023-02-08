@@ -20,5 +20,5 @@ spec:
         push:
             branch: flux
     update:
-        path: ./apps/base/investager
+        path: ./apps/dev
         strategy: Setters
