@@ -10,7 +10,7 @@ spec:
   values:
     api:
       image:
-        tag: main-30de19d-1675802934 # {"$imagepolicy": "flux-system:investager-api:tag"}
+        tag: main-037d56b-1675890832 # {"$imagepolicy": "flux-system:investager-api:tag"}
     ui:
       image:
-        tag: main-30de19d-1675802897 # {"$imagepolicy": "flux-system:investager-ui:tag"}
+        tag: main-037d56b-1675890805 # {"$imagepolicy": "flux-system:investager-ui:tag"}
