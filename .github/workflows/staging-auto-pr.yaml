@@ -1,0 +1,20 @@
+name: Staging Auto-PR
+on:
+    create:
+        branches: ["staging"]
+jobs:
+    pull-request:
+        name: Open PR to main
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              name: checkout
+
+            - uses: repo-sync/pull-request@7e79a9f5dc3ad0ce53138f01df2fad14a04831c5
+              name: pull-request
+              with:
+                  destination_branch: "main"
+                  pr_title: "Pulling ${{ github.ref }} into main"
+                  pr_body: "An automated PR"
+                  pr_reviewer: "tiberiu-matei"
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
