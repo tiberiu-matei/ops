@@ -7,10 +7,10 @@ spec:
   chart:
     spec:
       version: ">=0.0.1"
-    values:
-      api:
-        image:
-          tag: main-ffae47a-1675725111 # {"$imagepolicy": "flux-system:investager-api:tag"}
-      ui:
-        image:
-          tag: main-ffae47a-1675725095 # {"$imagepolicy": "flux-system:investager-ui:tag"}
+  values:
+    api:
+      image:
+        tag: main-ffae47a-1675725111 # {"$imagepolicy": "flux-system:investager-api:tag"}
+    ui:
+      image:
+        tag: main-ffae47a-1675725095 # {"$imagepolicy": "flux-system:investager-ui:tag"}
