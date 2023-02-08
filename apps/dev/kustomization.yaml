@@ -3,19 +3,8 @@ kind: Kustomization
 namespace: investager
 resources:
     - ../base/investager
-    - image-automation.yaml
 patchesStrategicMerge:
     - investager-values.yaml
-patchesJson6902:
-    - target:
-          group: ""
-          version: image.toolkit.fluxcd.io/v1beta1
-          kind: ImageUpdateAutomation
-          name: flux-system
-      patch: |-
-          - op: replace
-            path: /metadata/namespace
-            value: flux-system
 ---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
