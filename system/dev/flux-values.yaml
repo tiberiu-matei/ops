@@ -1,12 +1,8 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
-kind: HelmRelease
+apiVersion: notification.toolkit.fluxcd.io/v1beta2
+kind: Provider
 metadata:
-    name: flux
+    name: discord-provider
     namespace: flux-system
 spec:
-    chart:
-        spec:
-            version: ">=0.0.1"
-    values:
-        discordChannel: dev
-        discordUser: flux-dev
+    channel: dev
+    username: flux-dev

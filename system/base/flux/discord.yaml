@@ -1,3 +1,4 @@
+---
 apiVersion: notification.toolkit.fluxcd.io/v1beta2
 kind: Alert
 metadata:
@@ -12,3 +13,13 @@ spec:
           name: "*"
         - kind: Kustomization
           name: "*"
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta2
+kind: Provider
+metadata:
+    name: discord-provider
+    namespace: flux-system
+spec:
+    type: discord
+    secretRef:
+        name: discord-url

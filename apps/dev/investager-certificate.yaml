@@ -1,0 +1,10 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+    name: investager
+    namespace: investager
+spec:
+    commonName: "*.local.investager.com"
+    dnsNames:
+        - "local.investager.com"
+        - "*.local.investager.com"

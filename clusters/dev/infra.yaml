@@ -1,0 +1,49 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+    name: sealed-secrets
+    namespace: flux-system
+spec:
+    interval: 5m0s
+    sourceRef:
+        kind: GitRepository
+        name: flux-system
+    path: ./infra/sealed-secrets
+    prune: true
+    wait: true
+    timeout: 5m0s
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+    name: cert-manager
+    namespace: flux-system
+spec:
+    interval: 5m0s
+    dependsOn:
+        - name: sealed-secrets
+    sourceRef:
+        kind: GitRepository
+        name: flux-system
+    path: ./infra/cert-manager/dev
+    prune: true
+    wait: true
+    timeout: 5m0s
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+    name: cert-issuer
+    namespace: flux-system
+spec:
+    interval: 5m0s
+    dependsOn:
+        - name: cert-manager
+    sourceRef:
+        kind: GitRepository
+        name: flux-system
+    path: ./infra/cert-issuer
+    prune: true
+    wait: true
+    timeout: 5m0s

@@ -8,6 +8,7 @@ api:
     image:
         repository: ghcr.io/tiberiu-matei/investager/api
         pullPolicy: IfNotPresent
+    tlsSecretName: investager-tls-prod
 ui:
     namespace: investager
     replicaCount: 1
@@ -18,3 +19,4 @@ ui:
     image:
         repository: ghcr.io/tiberiu-matei/investager/ui
         pullPolicy: IfNotPresent
+    tlsSecretName: investager-tls-prod

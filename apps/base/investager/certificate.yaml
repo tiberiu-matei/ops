@@ -1,0 +1,10 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+    name: investager
+    namespace: investager
+spec:
+    secretName: investager-tls-prod
+    issuerRef:
+        name: letsencrypt
+        kind: ClusterIssuer

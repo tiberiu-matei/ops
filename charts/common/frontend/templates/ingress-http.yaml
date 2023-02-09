@@ -1,20 +1,18 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-    name: {{ .Values.application.name }}
+    name: {{ .Values.application.name }}-redirect
     namespace: {{ .Values.namespace }}
 spec:
     entryPoints:
-        - websecure
+        - web
     routes:
         - match: Host(`{{ .Values.domain }}`) && PathPrefix(`{{ .Values.application.prefix }}`)
           kind: Rule
-          #   middlewares:
-          #     - name: {{ .Values.application.name }}-strip
-          #       namespace: {{ .Values.namespace }}
+          middlewares:
+              - name: {{ .Values.application.name }}-redirect
+                namespace: {{ .Values.namespace }}
           services:
             - name: {{ .Values.application.name }}
               namespace: {{ .Values.namespace }}
               port: 80
-    tls:
-        secretName: {{ .Values.tlsSecretName }}

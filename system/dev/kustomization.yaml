@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: flux-system
 resources:
     - ../base/flux
+    - ../base/jetstack
 patchesStrategicMerge:
     - flux-values.yaml
