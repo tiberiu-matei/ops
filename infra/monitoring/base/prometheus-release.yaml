@@ -33,17 +33,20 @@ spec:
                 existingSecret: grafana
                 userKey: username
                 passwordKey: password
-            prometheus:
-                enabled: true
-                prometheusSpec:
-                    replicas: 1
-                    replicaExternalLabelName: "replica"
-                    ruleSelectorNilUsesHelmValues: false
-                    serviceMonitorSelectorNilUsesHelmValues: false
-                    podMonitorSelectorNilUsesHelmValues: false
-                    probeSelectorNilUsesHelmValues: false
-                    retention: 48h
-                    enableAdminAPI: true
-                    walCompression: true
-            thanosRuler:
-                enabled: false
+        prometheus:
+            enabled: true
+            prometheusSpec:
+                replicas: 1
+                replicaExternalLabelName: "replica"
+                ruleSelectorNilUsesHelmValues: false
+                serviceMonitorSelectorNilUsesHelmValues: false
+                podMonitorSelectorNilUsesHelmValues: false
+                probeSelectorNilUsesHelmValues: false
+                retention: 48h
+                enableAdminAPI: true
+                walCompression: true
+        prometheus-node-exporter:
+            fullnameOverride: node-exporter
+            hostRootFsMount: false
+        thanosRuler:
+            enabled: false
