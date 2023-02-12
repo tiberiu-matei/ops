@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: flux-system
 resources:
     - ../base/flux
+    - ../base/grafana
     - ../base/jetstack
     - ../base/longhorn
     - ../base/prometheus-community

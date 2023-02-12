@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: monitoring
 resources:
     - grafana-ingress.yaml
+    - loki-release.yaml
     - namespace.yaml
     - prometheus-release.yaml
