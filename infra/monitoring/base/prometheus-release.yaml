@@ -40,6 +40,11 @@ spec:
                   url: http://loki.monitoring:3100/
                   jsonData:
                       maxLines: 1000
+                - name: Prometheus
+                  type: prometheus
+                  uid: prometheus
+                  access: proxy
+                  url: http://prometheus-prometheus.monitoring:9090/
         nodeExporter:
             enabled: false
         prometheus:
