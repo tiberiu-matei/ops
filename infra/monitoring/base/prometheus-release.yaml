@@ -33,18 +33,6 @@ spec:
                 existingSecret: grafana
                 userKey: username
                 passwordKey: password
-            additionalDataSources:
-                - name: Loki
-                  type: loki
-                  access: proxy
-                  url: http://loki.monitoring:3100/
-                  jsonData:
-                      maxLines: 1000
-                - name: Prometheus
-                  type: prometheus
-                  uid: prometheus
-                  access: proxy
-                  url: http://prometheus-prometheus.monitoring:9090/
         nodeExporter:
             enabled: false
         prometheus:
