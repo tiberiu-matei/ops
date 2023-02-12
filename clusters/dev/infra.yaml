@@ -62,7 +62,7 @@ spec:
     sourceRef:
         kind: GitRepository
         name: flux-system
-    path: ./infra/monitoring
+    path: ./infra/monitoring/dev
     prune: true
     wait: true
     timeout: 5m0s
