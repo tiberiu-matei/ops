@@ -6,18 +6,5 @@ metadata:
 spec:
     entryPoints:
         - websecure
-    routes:
-        - match: Host(`replace-me`)
-          kind: Rule
-          services:
-              - name: grafana
-                namespace: monitoring
-                port: 80
-                # sticky:
-                #     cookie:
-                #         httpOnly: true
-                #         name: grafana
-                #         secure: true
-                #         sameSite: none
     tls:
         secretName: grafana-tls

@@ -6,3 +6,14 @@ metadata:
 spec:
     routes:
         - match: Host(`grafana.local.investager.com`)
+          kind: Rule
+          services:
+              - name: grafana
+                namespace: monitoring
+                port: 80
+                # sticky:
+                #     cookie:
+                #         httpOnly: true
+                #         name: grafana
+                #         secure: true
+                #         sameSite: none
