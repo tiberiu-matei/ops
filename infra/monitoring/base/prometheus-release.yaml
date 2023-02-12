@@ -33,6 +33,13 @@ spec:
                 existingSecret: grafana
                 userKey: username
                 passwordKey: password
+            additionalDataSources:
+                - name: Loki
+                  type: loki
+                  access: proxy
+                  url: http://loki.monitoring:3100/
+                  jsonData:
+                      maxLines: 1000
         nodeExporter:
             enabled: false
         prometheus:
