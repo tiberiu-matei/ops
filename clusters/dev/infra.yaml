@@ -6,6 +6,8 @@ metadata:
     namespace: flux-system
 spec:
     interval: 5m0s
+    dependsOn:
+        - name: system
     sourceRef:
         kind: GitRepository
         name: flux-system
@@ -56,7 +58,7 @@ metadata:
 spec:
     interval: 5m0s
     dependsOn:
-        - name: system
+        - name: cert-issuer
     sourceRef:
         kind: GitRepository
         name: flux-system
