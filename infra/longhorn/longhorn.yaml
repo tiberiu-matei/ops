@@ -21,6 +21,18 @@ spec:
                 namespace: flux-system
             version: "1.4.0"
     interval: 1h0m0s
+    values:
+        ingress:
+            enabled: true
+            host: longhorn.local.investager.com
+        longhornUI:
+            replicas: 1
+        longhornConversionWebhook:
+            replicas: 1
+        longhornAdmissionWebhook:
+            replicas: 1
+        longhornRecoveryBackend:
+            replicas: 1
     install:
         crds: CreateReplace
     upgrade:
