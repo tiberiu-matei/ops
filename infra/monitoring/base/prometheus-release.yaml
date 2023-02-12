@@ -45,6 +45,17 @@ spec:
                 retention: 48h
                 enableAdminAPI: true
                 walCompression: true
+                storageSpec:
+                    volumeClaimTemplate:
+                        spec:
+                            storageClassName: local-path
+                            accessModes:
+                                [
+                                    "ReadWriteOnce",
+                                ]
+                            resources:
+                                requests:
+                                    storage: 10Gi
         prometheus-node-exporter:
             fullnameOverride: node-exporter
             hostRootFsMount: false
