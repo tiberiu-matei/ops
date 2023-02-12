@@ -58,6 +58,5 @@ spec:
                                     storage: 10Gi
         prometheus-node-exporter:
             fullnameOverride: node-exporter
-            hostRootFsMount: false
         thanosRuler:
             enabled: false
