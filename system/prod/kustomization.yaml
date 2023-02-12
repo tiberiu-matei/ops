@@ -2,7 +2,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: flux-system
 resources:
+    - ../base/bitnami
     - ../base/flux
+    - ../base/grafana
     - ../base/jetstack
+    - ../base/longhorn
+    - ../base/prometheus-community
 patchesStrategicMerge:
     - flux-values.yaml

@@ -1,0 +1,19 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+    name: grafana-ingress
+    namespace: monitoring
+spec:
+    routes:
+        - match: Host(`grafana.local.investager.com`)
+          kind: Rule
+          services:
+              - name: grafana
+                namespace: monitoring
+                port: 80
+                # sticky:
+                #     cookie:
+                #         httpOnly: true
+                #         name: grafana
+                #         secure: true
+                #         sameSite: none

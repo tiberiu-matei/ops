@@ -11,15 +11,15 @@ metadata:
 spec:
     targetNamespace: cert-manager
     releaseName: cert-manager
-    interval: 5m
     chart:
         spec:
             chart: cert-manager
             version: "1.10.0"
             sourceRef:
                 kind: HelmRepository
-                name: jetstack-charts
+                name: jetstack
                 namespace: flux-system
+    interval: 1h0m0s
     install:
         remediation:
             retries: 3

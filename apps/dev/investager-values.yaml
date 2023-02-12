@@ -11,8 +11,8 @@ spec:
     api:
       domain: local.investager.com
       image:
-        tag: main-037d56b-1675890832 # {"$imagepolicy": "flux-system:investager-api:tag"}
+        tag: main-551a972-1676536696 # {"$imagepolicy": "flux-system:investager-api:tag"}
     ui:
       domain: local.investager.com
       image:
-        tag: main-037d56b-1675890805 # {"$imagepolicy": "flux-system:investager-ui:tag"}
+        tag: main-551a972-1676536675 # {"$imagepolicy": "flux-system:investager-ui:tag"}
