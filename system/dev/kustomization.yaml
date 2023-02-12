@@ -4,5 +4,6 @@ namespace: flux-system
 resources:
     - ../base/flux
     - ../base/jetstack
+    - ../base/longhorn
 patchesStrategicMerge:
     - flux-values.yaml
