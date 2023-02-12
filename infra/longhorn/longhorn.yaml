@@ -17,7 +17,7 @@ spec:
             chart: longhorn
             sourceRef:
                 kind: HelmRepository
-                name: longhorn
+                name: longhorn-charts
             version: "1.4.0"
     interval: 1h0m0s
     install:
