@@ -4,6 +4,6 @@ namespace: monitoring
 resources:
     - ../base
     - grafana-secret.yaml
-patchesStrategicMerge:
     - grafana-certificate.yaml
+patchesStrategicMerge:
     - grafana-ingress.yaml

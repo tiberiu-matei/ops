@@ -4,6 +4,10 @@ metadata:
     name: grafana-cert
     namespace: monitoring
 spec:
+    secretName: grafana-tls
+    issuerRef:
+        name: letsencrypt
+        kind: ClusterIssuer
     commonName: "grafana.investager.com"
     dnsNames:
         - "grafana.investager.com"
