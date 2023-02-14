@@ -34,5 +34,7 @@ spec:
             enabled: false
     install:
         crds: CreateReplace
+        disableWait: true
     upgrade:
         crds: CreateReplace
+        disableWait: true
