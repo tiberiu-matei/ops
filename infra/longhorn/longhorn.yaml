@@ -22,6 +22,8 @@ spec:
             version: "1.4.0"
     interval: 1h0m0s
     values:
+        defaultSettings:
+            deletingConfirmationFlag: true
         longhornUI:
             replicas: 1
         longhornConversionWebhook:
