@@ -2,15 +2,15 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
     name: longhorn
-    namespace: longhorn
+    namespace: longhorn-system
 spec:
     routes:
         - match: Host(`longhorn.local.investager.com`)
           kind: Rule
           middlewares:
               - name: longhorn-auth
-                namespace: longhorn
+                namespace: longhorn-system
           services:
               - name: longhorn-frontend
-                namespace: longhorn
+                namespace: longhorn-system
                 port: 80
