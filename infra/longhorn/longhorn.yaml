@@ -22,9 +22,6 @@ spec:
             version: "1.4.0"
     interval: 1h0m0s
     values:
-        ingress:
-            enabled: true
-            host: longhorn.local.investager.com
         longhornUI:
             replicas: 1
         longhornConversionWebhook:
@@ -33,6 +30,8 @@ spec:
             replicas: 1
         longhornRecoveryBackend:
             replicas: 1
+        ingress:
+            enabled: false
     install:
         crds: CreateReplace
     upgrade:
