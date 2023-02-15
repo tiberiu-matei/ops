@@ -25,7 +25,7 @@ spec:
         defaultSettings:
             deletingConfirmationFlag: "true"
         longhornUI:
-            replicas: 1
+            replicas: 2
         longhornConversionWebhook:
             replicas: 1
         longhornAdmissionWebhook:
