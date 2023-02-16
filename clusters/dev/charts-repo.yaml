@@ -9,7 +9,7 @@ spec:
         branch: main
     secretRef:
         name: flux-system
-    url: ssh://git@github.com/tiberiu-matei/ops
+    url: https://github.com/tiberiu-matei/ops.git
     ignore: |
         /*
         !/charts/
