@@ -5,5 +5,5 @@ resources:
     - ../base
     - longhorn-secret.yaml
     - longhorn-cert.yaml
-patchesStrategicMerge:
+    - longhorn-auth.yaml
     - longhorn-ingress.yaml

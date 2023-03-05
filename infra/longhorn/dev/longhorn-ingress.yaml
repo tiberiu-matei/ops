@@ -4,6 +4,10 @@ metadata:
     name: longhorn
     namespace: longhorn-system
 spec:
+    entryPoints:
+        - websecure
+    tls:
+        secretName: longhorn-tls
     routes:
         - match: Host(`longhorn.local.investager.com`)
           kind: Rule

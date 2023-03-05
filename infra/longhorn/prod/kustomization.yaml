@@ -3,7 +3,3 @@ kind: Kustomization
 namespace: longhorn-system
 resources:
     - ../base
-    - longhorn-secret.yaml
-    - longhorn-cert.yaml
-patchesStrategicMerge:
-    - longhorn-ingress.yaml
