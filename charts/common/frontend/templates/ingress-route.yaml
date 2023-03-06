@@ -7,11 +7,8 @@ spec:
     entryPoints:
         - websecure
     routes:
-        - match: Host(`{{ .Values.domain }}`) && PathPrefix(`{{ .Values.application.prefix }}`)
+        - match: Host(`{{ .Values.domain }}`)
           kind: Rule
-          #   middlewares:
-          #     - name: {{ .Values.application.name }}-strip
-          #       namespace: {{ .Values.namespace }}
           services:
             - name: {{ .Values.application.name }}
               namespace: {{ .Values.namespace }}

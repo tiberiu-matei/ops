@@ -8,10 +8,6 @@ spec:
     spec:
       version: ">=0.0.1"
   values:
-    api:
-      domain: investager.com
-      image:
-        tag: main-037d56b-1675890832 # {"$imagepolicy": "flux-system:investager-api:tag"}
     ui:
       domain: investager.com
       image:
