@@ -15,4 +15,4 @@ spec:
     ui:
       domain: investager.com
       image:
-        tag: main-b188499-1678023451 # {"$imagepolicy": "flux-system:investager-ui:tag"}
+        tag: main-90fdd12-1678089345 # {"$imagepolicy": "flux-system:investager-ui:tag"}
